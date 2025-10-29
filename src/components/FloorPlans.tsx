@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import { Home, Maximize2, DollarSign } from 'lucide-react';
 
 export function FloorPlans() {
+  const [downloading, setDownloading] = useState<Record<string, boolean>>({});
+
+  const brochureMap: Record<string, string> = {
+    '1 BHK': '/brochures/1-bhk.pdf',
+    '2 BHK': '/brochures/2-bhk.pdf',
+    '3.5 BHK Duplex': '/brochures/3-5-bhk.pdf',
+  };
+
   const plans = [
     {
       type: '1 BHK',
@@ -21,6 +30,34 @@ export function FloorPlans() {
       features: ['3.5 Bedrooms', '3 Bathrooms', '2 Balconies', 'Premium Kitchen', 'Terrace Garden'],
     },
   ];
+
+  async function handleDownload(planType: string) {
+    const path = brochureMap[planType] ?? '/brochures/default-brochure.pdf';
+    setDownloading((prev) => ({ ...prev, [planType]: true }));
+
+    try {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error(`Failed to fetch brochure: ${res.statusText}`);
+
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      const filename = `${planType.replace(/\s+/g, '-').toLowerCase()}.pdf`;
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      // basic error handling - you can replace with a toast/notification
+      // eslint-disable-next-line no-console
+      console.error(err);
+      alert('Could not download brochure. Please try again later.');
+    } finally {
+      setDownloading((prev) => ({ ...prev, [planType]: false }));
+    }
+  }
 
   return (
     <section id="floor-plans" className="py-24 px-6 bg-navy-900">
@@ -65,8 +102,16 @@ export function FloorPlans() {
                   ))}
                 </ul>
 
-                <button className="w-full bg-gold-500 hover:bg-gold-600 text-navy-900 py-3 px-6 font-semibold transition-colors">
-                  Download Brochure
+                <button
+                  type="button"
+                  onClick={() => handleDownload(plan.type)}
+                  disabled={!!downloading[plan.type]}
+                  aria-busy={!!downloading[plan.type]}
+                  className={`w-full ${
+                    downloading[plan.type] ? 'opacity-70 cursor-not-allowed' : ''
+                  } bg-gold-500 hover:bg-gold-600 text-navy-900 py-3 px-6 font-semibold transition-colors`}
+                >
+                  {downloading[plan.type] ? 'Downloading...' : 'Download Brochure'}
                 </button>
               </div>
             </div>
