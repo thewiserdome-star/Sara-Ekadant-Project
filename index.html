@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- use %BASE_URL% for static assets so the final HTML references include the repo base -->
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real Estate Gallery Lead Webapp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,8 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- IMPORTANT: keep the module import root-relative so Vite can resolve it during build -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
