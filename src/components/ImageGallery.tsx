@@ -3,8 +3,8 @@ import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 
 const images = [
   {
-    url: 'https://res.cloudinary.com/duzonog7y/image/upload/v1761221585/Sara_Ekadant3_r4e5fh.jpg',
-    title: 'Modern Living Room',
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_01_Bird View copy.jpg',
+    title: 'Building Bird Eye View',
   },
 
   {
