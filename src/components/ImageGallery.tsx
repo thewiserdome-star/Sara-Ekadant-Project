@@ -8,30 +8,35 @@ const images = [
   },
 
   {
-    url: 'https://drive.google.com/file/d/1rtSHJRnAAHmIcgTnddoFklSR0FJ7ztWy/view',
-    title: 'Elevation',
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_03_Building View copy.jpg',
+    title: 'BuildingFront View',
   },
   
   {
-    url: 'https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant1_ypxiwz.jpg?auto=compress&cs=tinysrgb&w=1200',
-    title: 'Gourmet Kitchen',
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_06_building_back_side copy.jpg',
+    title: 'Back side Digonal Side Elevation',
   },
   {
-    url: 'https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant2_unrwog.jpg?auto=compress&cs=tinysrgb&w=1200',
-    title: 'Master Bedroom',
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_05_building_side copy.jpg',
+    title: 'Horizontal side Elevation',
   },
   {
-    url: 'https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant4_x04ykv.jpg?auto=compress&cs=tinysrgb&w=1200',
-    title: 'Luxury Bathroom',
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_04_building_perspective copy.jpg',
+    title: 'Building Perspective',
   },
   {
-    url: 'https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant5_f3pd2n.jpg?auto=compress&cs=tinysrgb&w=1200',
-    title: 'Dining Area',
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_02_Block View copy.jpg',
+    title: 'Bird eye Block View',
   },
   {
-    url: 'https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant7_ollblt.jpg?auto=compress&cs=tinysrgb&w=1200',
-    title: 'Outdoor Terrace',
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_07 copy.jpg',
+    title: 'Left Digonal Side Elevation',
   },
+  {
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_04_Night_view copy.jpg',
+    title: 'Right Side digonal night View',
+  },
+  
 ];
 
 export function ImageGallery() {
