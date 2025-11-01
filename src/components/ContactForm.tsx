@@ -32,8 +32,8 @@ export function ContactForm() {
       if (error) throw error;
 
       const link = document.createElement('a');
-      link.href = 'https://collection.cloudinary.com/duzonog7y/3d3b25ab37d994f603c0c38211016542';
-      link.download = 'Sara_Ekadant_Brochure_wxfagm.pdf';
+      link.href = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara%20Ekadant%20Brochure.pdf';
+      link.download = 'Sara%20Ekadant%20Brochure.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
