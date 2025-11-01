@@ -8,7 +8,7 @@ const images = [
   },
 
   {
-    url: 'https://drive.google.com/file/d/1UjagqeN-ryFvdN5dycaBvSvOlTTY7gm0/view',
+    url: 'https://drive.google.com/file/d/1rtSHJRnAAHmIcgTnddoFklSR0FJ7ztWy/view',
     title: 'Elevation',
   },
   
