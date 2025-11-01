@@ -14,7 +14,7 @@ export function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+    e.preventDefault();  // Prevent form default submit behavior
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -31,9 +31,10 @@ export function ContactForm() {
 
       if (error) throw error;
 
+      // Download PDF without opening in new tab
       const link = document.createElement('a');
       link.href = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara%20Ekadant%20Brochure.pdf';
-      link.download = 'Sara%20Ekadant%20Brochure.pdf';
+      link.download = 'Sara Ekadant Brochure.pdf';  // decoded filename for save dialog
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -116,27 +117,26 @@ export function ContactForm() {
             </div>
 
             <div>
-  <label className="block text-sm font-medium text-gray-300 mb-3">
-    Property Configuration
-  </label>
-  <div className="flex flex-wrap gap-6 text-gray-200">
-    {['1 BHK', '2 BHK', '3.5 BHK Duplex'].map((option) => (
-      <label key={option} className="inline-flex items-center space-x-2 cursor-pointer">
-        <input
-          type="radio"
-          name="propertyConfig"
-          value={option}
-          checked={formData.propertyConfig === option}
-          onChange={(e) => setFormData({ ...formData, propertyConfig: e.target.value })}
-          className="h-5 w-5 text-gold-500 focus:ring-gold-500 border-gold-500/50 bg-navy-700"
-          required
-        />
-        <span>{option}</span>
-      </label>
-    ))}
-  </div>
-</div>
-
+              <label className="block text-sm font-medium text-gray-300 mb-3">
+                Property Configuration
+              </label>
+              <div className="flex flex-wrap gap-6 text-gray-200">
+                {['1 BHK', '2 BHK', '3.5 BHK Duplex'].map((option) => (
+                  <label key={option} className="inline-flex items-center space-x-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="propertyConfig"
+                      value={option}
+                      checked={formData.propertyConfig === option}
+                      onChange={(e) => setFormData({ ...formData, propertyConfig: e.target.value })}
+                      className="h-5 w-5 text-gold-500 focus:ring-gold-500 border-gold-500/50 bg-navy-700"
+                      required
+                    />
+                    <span>{option}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
