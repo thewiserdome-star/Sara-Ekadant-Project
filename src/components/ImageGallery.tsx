@@ -6,6 +6,12 @@ const images = [
     url: 'https://res.cloudinary.com/duzonog7y/image/upload/v1761221585/Sara_Ekadant3_r4e5fh.jpg',
     title: 'Modern Living Room',
   },
+
+  {
+    url: 'https://drive.google.com/file/d/1UjagqeN-ryFvdN5dycaBvSvOlTTY7gm0/view',
+    title: 'Elevation',
+  },
+  
   {
     url: 'https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant1_ypxiwz.jpg?auto=compress&cs=tinysrgb&w=1200',
     title: 'Gourmet Kitchen',
