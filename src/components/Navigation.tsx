@@ -22,7 +22,7 @@ export function Navigation() {
            <img
               src="https://saraekadant.blob.core.windows.net/mediasaraekadant/001_logo.JPG"
               alt="Logo"
-              className="w-8 h-8"
+              className="w-12 h-12"
               style={{ objectFit: 'contain' }}
             />
             <span className="text-2xl font-playfair font-bold text-white">Luxury Homes</span>
