@@ -16,7 +16,7 @@ export function Hero({ onScrollToGallery }: HeroProps) {
           <img
               src="https://saraekadant.blob.core.windows.net/mediasaraekadant/001_logo.JPG"
               alt="Logo"
-              className="w-50 h-50"
+              className="w-40 h-40"
               style={{ objectFit: 'contain' }}
             />
         </div>
