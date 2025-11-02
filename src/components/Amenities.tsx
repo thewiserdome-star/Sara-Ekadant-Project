@@ -1,4 +1,4 @@
-import { CloudRain, Waves, Trees, Shield, SquareParking, Zap, Wind, Droplets, Users, Sun, Flame, BatteryCharging } from 'lucide-react';
+import { CloudRain, Waves, Trees, Shield, Car, Zap, Wind, Droplets, Users, Sun, Flame, BatteryCharging } from 'lucide-react';
 
 export function Amenities() {
   const amenities = [
