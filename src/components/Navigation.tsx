@@ -19,12 +19,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
-        <img 
-          src="https://saraekadant.blob.core.windows.net/mediasaraekadant/Logo.JPG" 
-          alt="Logo"
-          className="w-8 h-8"
-        style={{ objectFit: 'contain' }} // optional for scaling
-        />
+           <Building2 className="w-8 h-8 text-gold-500" />
             <span className="text-2xl font-playfair font-bold text-white">Luxury Homes</span>
           </div>
 
