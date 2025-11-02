@@ -1,17 +1,6 @@
-import { useState } from 'react';
 import { Home, Maximize2, DollarSign } from 'lucide-react';
 
 export function FloorPlans() {
-  const [downloading, setDownloading] = useState<Record<string, boolean>>({});
-
-  // Map all configurations to the same Azure Blob PDF for now
-  const brochureUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara%20Ekadant%20Brochure.pdf';
-  const brochureMap: Record<string, string> = {
-    '1 BHK': brochureUrl,
-    '2 BHK': brochureUrl,
-    '3.5 BHK Duplex': brochureUrl,
-  };
-
   const plans = [
     {
       type: '1 BHK',
@@ -33,23 +22,10 @@ export function FloorPlans() {
     },
   ];
 
-  function handleDownload(planType: string) {
-    setDownloading((prev) => ({ ...prev, [planType]: true }));
-    try {
-      const brochureLink = brochureMap[planType] || brochureUrl;
-      const a = document.createElement('a');
-      a.href = brochureLink;
-      a.download = `${planType.replace(/\s+/g, '-').toLowerCase()}-sara-ekadant-brochure.pdf`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    } catch (err) {
-      // basic error handling
-      // eslint-disable-next-line no-console
-      console.error(err);
-      alert('Could not download brochure. Please try again later.');
-    } finally {
-      setDownloading((prev) => ({ ...prev, [planType]: false }));
+  function handleBrochureClick() {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
@@ -98,12 +74,10 @@ export function FloorPlans() {
 
                 <button
                   type="button"
-                  onClick={() => handleDownload(plan.type)}
-                  disabled={!!downloading[plan.type]}
-                  aria-busy={!!downloading[plan.type]}
-                  className={`w-full ${downloading[plan.type] ? 'opacity-70 cursor-not-allowed' : ''} bg-gold-500 hover:bg-gold-600 text-navy-900 py-3 px-6 font-semibold transition-colors`}
+                  onClick={handleBrochureClick}
+                  className="w-full bg-gold-500 hover:bg-gold-600 text-navy-900 py-3 px-6 font-semibold transition-colors"
                 >
-                  {downloading[plan.type] ? 'Downloading...' : 'Download Brochure'}
+                  Download Brochure
                 </button>
               </div>
             </div>
