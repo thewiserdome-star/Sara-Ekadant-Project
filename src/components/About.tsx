@@ -65,7 +65,7 @@ export function About() {
                 About The Project
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Welcome to your dream home, where luxury meets comfort. Our meticulously designed residences offer the perfect blend of modern architecture and timeless elegance.
+                Welcome to your dream home, where luxury meets Prosperity. Our meticulously designed residences offer the perfect blend of modern architecture and timeless elegance.
               </p>
               <p className="text-gray-400 leading-relaxed mb-4">
                 Located in a prime area with excellent connectivity, this project redefines urban living with spacious layouts, premium finishes, and world-class amenities.
