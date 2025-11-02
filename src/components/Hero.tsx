@@ -13,7 +13,12 @@ export function Hero({ onScrollToGallery }: HeroProps) {
 
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
         <div className="flex justify-center mb-8">
-          <Building2 className="w-24 h-24 text-gold-500" strokeWidth={1.5} />
+          <img
+              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/001_logo.JPG"
+              alt="Logo"
+              className="w-8 h-8"
+              style={{ objectFit: 'contain' }}
+            />
         </div>
 
         <h1 className="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 tracking-tight">
