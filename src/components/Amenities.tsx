@@ -6,7 +6,7 @@ export function Amenities() {
     { icon: Waves, title: 'Swimming Pool' },
     { icon: Trees, title: 'Roof Top Terrace Garden' },
     { icon: Shield, title: '24 Hrs. CCTV Surveillance & Security' },
-    { icon: SquareParking, title: 'Ample Car Parking Space' },
+    { icon: Car, title: 'Ample Car Parking Space' },
     { icon: Zap, title: 'Power Backup' },
     { icon: Wind, title: 'Senior Citizens Area' },
     { icon: Droplets, title: 'Water Supply' },
