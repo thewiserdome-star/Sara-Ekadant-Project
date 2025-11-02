@@ -1,16 +1,14 @@
-import { CloudRain, Waves, Trees, Shield, Car, Zap, Wind, Droplets, Users, Sun, Flame, BatteryCharging } from 'lucide-react';
+import { CloudRain, Trees, Shield, Car, Zap, Users, Droplets, Sun, Flame, BatteryCharging } from 'lucide-react';
 
 export function Amenities() {
   const amenities = [
     { icon: CloudRain, title: 'Rainwater Harvesting System' },
-    { icon: Waves, title: 'Swimming Pool' },
     { icon: Trees, title: 'Roof Top Terrace Garden' },
     { icon: Shield, title: '24 Hrs. CCTV Surveillance & Security' },
     { icon: Car, title: 'Ample Car Parking Space' },
     { icon: Zap, title: 'Power Backup' },
-    { icon: Wind, title: 'Senior Citizens Area' },
+    { icon: Users, title: 'Senior Citizens Area' },
     { icon: Droplets, title: 'Water Supply' },
-    { icon: Users, title: 'Clubhouse' },
     { icon: Sun, title: 'Solar Water Heater' },
     { icon: Flame, title: 'Fire Fighting System' },
     { icon: BatteryCharging, title: 'Power Backups for Lifts, Pumps & Common Areas Lighting' }
