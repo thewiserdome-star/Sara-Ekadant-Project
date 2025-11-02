@@ -12,19 +12,14 @@ export function Hero({ onScrollToGallery }: HeroProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-navy-900/50 via-transparent to-navy-900/80"></div>
 
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-12">
           <img
-              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/001_logo.JPG"
-              alt="Logo"
-              className="w-40 h-40"
+              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/0000_Project_name.JPG"
+              alt="Project Name"
+              className="max-w-lg h-auto"
               style={{ objectFit: 'contain' }}
             />
         </div>
-
-        <h1 className="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 tracking-tight">
-          Sara Ekadant
-          <span className="block text-gold-500 font-normal mt-4 text-3xl md:text-4xl">Where Luxury Meets Prosperity</span>
-        </h1>
 
         <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
           Experience exceptional architecture and timeless design in the heart of the city's most prestigious neighborhood
