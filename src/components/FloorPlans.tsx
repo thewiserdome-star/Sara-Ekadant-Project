@@ -15,20 +15,20 @@ export function FloorPlans() {
   const plans = [
     {
       type: '1 BHK',
-      area: '650 sq.ft',
-      price: 'Starting from ₹55 Lakhs',
+      area: '585 sq.ft',
+      price: 'Starting from ₹62 Lakhs',
       features: ['1 Bedroom', '1 Bathroom', 'Balcony', 'Modular Kitchen'],
     },
     {
       type: '2 BHK',
-      area: '950 sq.ft',
+      area: '1167 sq.ft',
       price: 'Starting from ₹98 Lakhs',
-      features: ['2 Bedrooms', '2 Bathrooms', 'Balcony', 'Modular Kitchen'],
+      features: ['2 Bedrooms', '2 Bathrooms', '2 Balcony', 'Modular Kitchen'],
     },
     {
       type: '3.5 BHK Duplex',
-      area: '1850 sq.ft',
-      price: 'Starting from ₹2 Crores',
+      area: '2193 sq.ft',
+      price: 'Starting from ₹2.5 Crores',
       features: ['3.5 Bedrooms', '3 Bathrooms', '2 Balconies', 'Premium Kitchen', 'Terrace Garden'],
     },
   ];
