@@ -9,7 +9,7 @@ const features = [
   {
     icon: MapPin,
     title: 'Prime Location',
-    description: 'Walking distance to Balewadi Sports Complex, shops, dining, and entertainment',
+    description: 'Located within 1.5 KM of Balewadi Sports Complex, D Mart, popular dining spots, hospitals, schools, and entertainment hubs.',
   },
   {
     icon: Ruler,
