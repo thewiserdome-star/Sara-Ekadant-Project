@@ -1,4 +1,4 @@
-import { Home, MapPin, Ruler, Key } from 'lucide-react';
+import { Home, MapPin, Ruler, Cctv } from 'lucide-react';
 
 const features = [
   {
@@ -14,12 +14,12 @@ const features = [
   {
     icon: Ruler,
     title: 'Spacious Layout',
-    description: 'Thoughtfully designed living space with large bedrooms',
+    description: 'Thoughtfully designed living space with Spacious Interiors With Natural Lighting & Ventilation',
   },
   {
-    icon: Key,
-    title: 'Move-In Ready',
-    description: 'Fully renovated and ready for immediate occupancy',
+    icon: Cctv,
+    title: '24 Hrs. CCTV Surveillance & Security ',
+    description: 'Round-the-clock CCTV monitoring and security for your complete peace of mind',
   },
 ];
 
