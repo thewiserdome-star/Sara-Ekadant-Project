@@ -1,19 +1,19 @@
-import { Dumbbell, Waves, Trees, Shield, Car, Zap, Wind, Droplets, Users, Heart, BookOpen, Gamepad2 } from 'lucide-react';
+import { CloudRain, Waves, Trees, Shield, SquareParking, Zap, Wind, Droplets, Users, Sun, BatteryCharging, Flame } from 'lucide-react';
 
 export function Amenities() {
   const amenities = [
-    { icon: Dumbbell, title: 'Fitness Center' },
+    { icon: CloudRain, title: 'Rainwater Harvesting System' },
     { icon: Waves, title: 'Swimming Pool' },
-    { icon: Trees, title: 'Landscaped Gardens' },
-    { icon: Shield, title: '24/7 Security' },
-    { icon: Car, title: 'Covered Parking' },
+    { icon: Trees, title: 'Roof Top Terrace Garden' },
+    { icon: Shield, title: '24 Hrs. CCTV Surveillance & Security' },
+    { icon: SquareParking, title: 'Ample Car Parking Space' },
     { icon: Zap, title: 'Power Backup' },
-    { icon: Wind, title: 'Central AC' },
+    { icon: Wind, title: 'Senior Citizens Area' },
     { icon: Droplets, title: 'Water Supply' },
     { icon: Users, title: 'Clubhouse' },
-    { icon: Heart, title: 'Yoga & Meditation' },
-    { icon: BookOpen, title: 'Library' },
-    { icon: Gamepad2, title: 'Indoor Games' },
+    { icon: Sun, title: 'Solar Water Heater' },
+    { icon: Flame, title: 'Fire Fighting System' },
+    { icon: BatteryCharging, title: 'Power Backups for Lifts, Pumps & Common Areas Lighting ' },
   ];
 
   return (
