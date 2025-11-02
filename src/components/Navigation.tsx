@@ -20,7 +20,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
            <img
-              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/Logo.JPG"
+              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/001_logo.JPG"
               alt="Logo"
               className="w-8 h-8"
               style={{ objectFit: 'contain' }}
