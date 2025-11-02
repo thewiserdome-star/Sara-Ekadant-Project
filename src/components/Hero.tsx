@@ -14,7 +14,7 @@ export function Hero({ onScrollToGallery }: HeroProps) {
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
         <div className="flex justify-center mb-12">
           <img
-              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/0000_Project_name.JPG"
+              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara_Ekadant_Logo_NanoB.png"
               alt="Project Name"
               className="max-w-lg h-auto"
               style={{ objectFit: 'contain' }}
