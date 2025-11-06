@@ -14,7 +14,7 @@ export function ReraCard({
   reraWebUrl = 'https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTIxMDAwODA1MTMmU2NhbnR5cGU9UHJvbW90ZXJMb2dpblFSQ29kZQ=='
 }: ReraCardProps) {
   return (
-    <div className="absolute top-4 right-4 md:top-8 md:right-8 z-20 max-w-sm">
+    <div className="hidden md:block absolute md:top-20 md:right-8 z-20 max-w-sm">
       <div className="bg-gradient-to-br from-white/95 to-gray-50/95 backdrop-blur-sm rounded-lg shadow-2xl border border-gray-200/50 p-4 md:p-6">
         {/* Header with QR Code and Title */}
         <div className="flex items-start gap-4 mb-4">
