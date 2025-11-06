@@ -36,16 +36,7 @@ export function Hero({ onScrollToGallery }: HeroProps) {
             <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
           </button>
 
-          <a
-            href="https://photos.app.goo.gl/YOUR_GOOGLE_PHOTOS_LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center gap-3 bg-navy-800 hover:bg-navy-700 border-2 border-gold-500/50 hover:border-gold-500 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105"
-          >
-            <Images className="w-5 h-5" />
-            View Full Album
-          </a>
-        </div>
+          </div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
