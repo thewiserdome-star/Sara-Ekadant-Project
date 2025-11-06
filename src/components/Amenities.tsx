@@ -6,9 +6,7 @@ export function Amenities() {
     { icon: Trees, title: 'Roof Top Terrace Garden' },
     { icon: Shield, title: '24 Hrs. CCTV Surveillance & Security' },
     { icon: Car, title: 'Ample Car Parking Space' },
-    { icon: Zap, title: 'Power Backup' },
     { icon: Users, title: 'Senior Citizens Area' },
-    { icon: Droplets, title: 'Water Supply' },
     { icon: Sun, title: 'Solar Water Heater' },
     { icon: Flame, title: 'Fire Fighting System' },
     { icon: BatteryCharging, title: 'Power Backups for Lifts, Pumps & Common Areas Lighting' }
