@@ -25,7 +25,7 @@ export function Navigation() {
               className="w-12 h-12"
               style={{ objectFit: 'contain' }}
             />
-            <span className="text-2xl font-playfair font-bold text-white">Luxury Homes</span>
+            <span className="text-2xl font-playfair font-bold text-white">Sara Ekadant</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
