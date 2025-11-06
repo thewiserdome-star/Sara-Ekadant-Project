@@ -13,12 +13,10 @@ export function Hero({ onScrollToGallery }: HeroProps) {
 
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
         <div className="flex justify-center mb-12">
-          <img
-              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara_Ekadant_Logo_NanoB.png"
-              alt="Project Name"
-              className="max-w-lg h-auto"
-              style={{ objectFit: 'contain' }}
-            />
+          <h1 className="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 tracking-tight">
+          Sara Ekadant
+          <span className="block text-gold-500 font-normal mt-4 text-3xl md:text-4xl">Where Luxury Meets Prosperity</span>
+        </h1>
         </div>
 
         <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
