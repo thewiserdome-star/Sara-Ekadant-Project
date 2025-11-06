@@ -1,4 +1,5 @@
 import { Building2, ChevronDown, Images } from 'lucide-react';
+import { ReraCard } from './ReraCard';
 
 interface HeroProps {
   onScrollToGallery: () => void;
@@ -10,6 +11,9 @@ export function Hero({ onScrollToGallery }: HeroProps) {
       <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant2_unrwog.jpg')] bg-cover bg-center opacity-30"></div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-navy-900/50 via-transparent to-navy-900/80"></div>
+
+      {/* RERA Card */}
+      <ReraCard />
 
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
         <div className="flex justify-center mb-12">

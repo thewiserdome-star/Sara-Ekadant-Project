@@ -60,7 +60,11 @@ export function FloorPlans() {
               <div className="p-6">
                 <div className="flex items-center gap-2 text-orange-500 mb-6">
                   <DollarSign className="w-5 h-5" />
-                  <span className="text-lg font-semibold">{plan.price}</span>
+                  <span 
+                    className={`text-lg font-semibold ${plan.type === '1 BHK' ? 'line-through decoration-green-500' : ''}`}
+                  >
+                    {plan.price}
+                  </span>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -74,10 +78,16 @@ export function FloorPlans() {
 
                 <button
                   type="button"
-                  onClick={handleBrochureClick}
-                  className="w-full bg-gold-500 hover:bg-gold-600 text-navy-900 py-3 px-6 font-semibold transition-colors"
+                  onClick={plan.type === '1 BHK' ? undefined : handleBrochureClick}
+                  disabled={plan.type === '1 BHK'}
+                  aria-disabled={plan.type === '1 BHK' ? 'true' : 'false'}
+                  className={`w-full py-3 px-6 font-semibold transition-colors ${
+                    plan.type === '1 BHK'
+                      ? 'bg-gray-500 text-gray-300 cursor-not-allowed opacity-60'
+                      : 'bg-gold-500 hover:bg-gold-600 text-navy-900'
+                  }`}
                 >
-                  Download Brochure
+                  {plan.type === '1 BHK' ? 'SOLD OUT' : 'Download Brochure'}
                 </button>
               </div>
             </div>
