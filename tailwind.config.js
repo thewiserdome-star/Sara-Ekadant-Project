@@ -18,7 +18,7 @@ module.exports = {
       },
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],
-        body: ['Poppins', 'Inter', 'ui-sans-serif', 'system-ui', 'system-ui', 'sans-serif'],
+        body: ['Poppins', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'soft-card': '0 8px 24px rgba(3,8,20,0.45)',
