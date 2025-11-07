@@ -8,8 +8,11 @@ export function Location() {
     { icon: Cross, title: 'Hospital', distance: '3 km' },
   ];
 
-  // Embeddable Google Maps iframe src (provided by you)
+  // Keep the embeddable iframe src for inline map
   const embedSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.083806012823!2d73.75729177501435!3d18.57026008253295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9558afbfda7%3A0xfedab17d94fc19a4!2sSara%20Ekadant%20Housing%20Project%20Mahalunge!5e0!3m2!1sen!2sin!4v1762518513661!5m2!1sen!2sin";
+
+  // Use a normal (non-embed) map URL for opening in a new tab to avoid the "Embed API" error
+  const mapsUrl = 'https://maps.app.goo.gl/J9M1jjyLKN1J43Gs7';
 
   return (
     <section id="location" className="py-24 px-6 bg-navy-800">
@@ -40,7 +43,8 @@ export function Location() {
                 <p className="text-gray-400 leading-relaxed">Located in a well-connected area with easy access to major roads, highways, and public transportation. Perfect for both work and leisure.</p>
 
                 <div className="mt-4">
-                  <a href={embedSrc} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gold-500 hover:underline font-medium" aria-label="Open location in Google Maps (opens in new tab)">
+                  {/* OPEN A NON-EMBED MAP URL in a new tab so the user doesn't see the Embed-API message */}
+                  <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gold-500 hover:underline font-medium" aria-label="Open location in Google Maps (opens in new tab)">
                     View on Google Maps
                     <ExternalLink className="w-4 h-4" />
                   </a>
