@@ -139,7 +139,7 @@
     @apply font-semibold text-base;
     @apply bg-gold-500 text-navy-900;
     @apply shadow-refined hover:shadow-refined-md;
-    @apply transition-all duration-250;
+    @apply transition-all duration-300;
     @apply focus-visible:ring-2 focus-visible:ring-gold-600 focus-visible:ring-offset-2;
     border: 2px solid transparent;
   }
@@ -160,7 +160,7 @@
     @apply bg-transparent text-navy-900;
     @apply border-2 border-navy-900;
     @apply shadow-refined-sm hover:shadow-refined;
-    @apply transition-all duration-250;
+    @apply transition-all duration-300;
     @apply focus-visible:ring-2 focus-visible:ring-navy-900 focus-visible:ring-offset-2;
   }
   
@@ -175,7 +175,7 @@
   /* Generic Card Component */
   .card {
     @apply bg-white rounded-refined-xl shadow-refined;
-    @apply p-6 transition-shadow duration-250;
+    @apply p-6 transition-shadow duration-300;
     border: 1px solid rgba(16, 42, 67, 0.08);
   }
   
