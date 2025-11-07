@@ -1,0 +1,102 @@
+:root{
+  /* Color tokens */
+  --brand-navy: #07122A;
+  --brand-navy-2: #0B2540;
+  --brand-navy-3: #10283A;
+  --brand-gold: #D4AF37;
+  --brand-gold-600: #B88622;
+  --brand-cream: #F6F2EA;
+  --muted-gray: #B8C0C9;
+
+  /* Typography scale */
+  --h1-size: clamp(2rem, 4.5vw, 4rem);
+  --h2-size: clamp(1.5rem, 3.5vw, 2.75rem);
+  --base-font-size: 16px;
+
+  /* Spacing tokens if needed */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+}
+
+/* Global base */
+html, body {
+  height: 100%;
+  background-color: var(--brand-navy);
+  color: #fff;
+  font-family: 'Poppins', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings: Playfair Display for tasteful, elegant headings */
+h1, h2, h3, h4, .font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #fff;
+}
+
+/* Subtitles / accent */
+.site-subtitle {
+  color: var(--brand-gold);
+  font-weight: 600;
+}
+
+/* Card token */
+.card {
+  background: var(--brand-navy-2);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(3,8,20,0.45);
+}
+
+/* RERA / badge style */
+.rera-card {
+  background: linear-gradient(180deg, rgba(246,242,234,0.98), rgba(246,242,234,0.95));
+  color: var(--brand-navy);
+  border: 1px solid rgba(3,8,20,0.06);
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+/* Primary button token */
+.btn-primary {
+  background: var(--brand-gold);
+  color: var(--brand-navy);
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 6px 18px rgba(3,8,20,0.25);
+  transition: transform .14s ease, background-color .14s ease, box-shadow .14s ease;
+}
+.btn-primary:hover { background: var(--brand-gold-600); transform: translateY(-2px); }
+.btn-primary:focus { outline: 3px solid rgba(212,175,55,0.18); }
+
+/* Secondary outline */
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--brand-gold);
+  color: var(--brand-gold);
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
+}
+
+/* Utility useful for cards and surfaces */
+.surface-cream {
+  background: var(--brand-cream);
+  color: var(--brand-navy);
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+
+/* Small text and muted */
+.muted { color: var(--muted-gray); }
+
+/* Focus visible helper (keyboard) */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  box-shadow: 0 0 0 4px rgba(212,175,55,0.12);
+  border-radius: 8px;
+}
