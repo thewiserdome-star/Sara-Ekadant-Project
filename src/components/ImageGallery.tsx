@@ -1,140 +1,109 @@
-import { useState } from 'react';
-import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
   {
     url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_01_Bird View copy.jpg',
     title: 'Building Bird Eye View',
   },
-
   {
     url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_03_Building View copy.jpg',
-    title: 'BuildingFront View',
+    title: 'Building Front View',
   },
-  
   {
     url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_06_building_back_side copy.jpg',
-    title: 'Back side Digonal Side Elevation',
+    title: 'Back Side Diagonal Elevation',
   },
   {
     url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_05_building_side copy.jpg',
-    title: 'Horizontal side Elevation',
+    title: 'Horizontal Side Elevation',
   },
-  {
-    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_04_building_perspective copy.jpg',
-    title: 'Building Perspective',
-  },
-  {
-    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_02_Block View copy.jpg',
-    title: 'Bird eye Block View',
-  },
-  {
-    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_07 copy.jpg',
-    title: 'Left Digonal Side Elevation',
-  },
-  {
-    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_04_Night_view copy.jpg',
-    title: 'Right Side digonal night View',
-  },
-  
 ];
 
 export function ImageGallery() {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 
-  const openLightbox = (index: number) => {
-    setCurrentImage(index);
-    setLightboxOpen(true);
-  };
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (!isOpen) return;
+      if (e.key === 'Escape') setIsOpen(false);
+      if (e.key === 'ArrowRight') setIndex((i) => Math.min(i + 1, images.length - 1));
+      if (e.key === 'ArrowLeft') setIndex((i) => Math.max(i - 1, 0));
+    }
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen]);
 
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-  };
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => closeBtnRef.current?.focus(), 50);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [isOpen]);
 
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
-  };
+  function openAt(i: number) {
+    setIndex(i);
+    setIsOpen(true);
+  }
 
-  const previousImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
-  };
+  function prev() {
+    setIndex((i) => (i - 1 + images.length) % images.length);
+  }
+
+  function next() {
+    setIndex((i) => (i + 1) % images.length);
+  }
 
   return (
     <section id="gallery" className="py-24 px-6 bg-navy-900">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">Property Gallery</h2>
-          <p className="text-xl text-gray-400">Explore every detail of your future home</p>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">Gallery</h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Explore the property from different perspectives</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="group relative aspect-[4/3] overflow-hidden bg-navy-800 border border-gold-500/20 cursor-pointer hover:border-gold-500 transition-all"
-              onClick={() => openLightbox(index)}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {images.map((img, i) => (
+            <button
+              key={img.url}
+              onClick={() => openAt(i)}
+              className="overflow-hidden rounded-md bg-navy-800 focus:outline-none focus:ring-2 focus:ring-gold-500"
+              aria-label={`Open ${img.title} image`}
             >
-              <img
-                src={image.url}
-                alt={image.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/0 to-navy-900/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-xl font-semibold mb-2">{image.title}</h3>
-                  <div className="flex items-center gap-2 text-sm text-gold-500">
-                    <Maximize2 className="w-4 h-4" />
-                    <span>Click to enlarge</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <img src={img.url} alt={img.title} className="w-full h-40 object-cover transform group-hover:scale-105 transition" loading="lazy" />
+            </button>
           ))}
         </div>
-      </div>
 
-      {lightboxOpen && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center">
-          <button
-            onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white hover:text-gold-500 transition-colors p-2"
-            aria-label="Close lightbox"
-          >
-            <X className="w-8 h-8" />
-          </button>
+        {isOpen && (
+          <div role="dialog" aria-modal="true" aria-label="Image viewer" className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4">
+            <div className="relative max-w-4xl w-full">
+              <button ref={closeBtnRef} onClick={() => setIsOpen(false)} className="absolute top-3 right-3 p-2 rounded bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-gold-500" aria-label="Close viewer">
+                <X className="w-5 h-5" />
+              </button>
 
-          <button
-            onClick={previousImage}
-            className="absolute left-6 text-white hover:text-gold-500 transition-colors p-2"
-            aria-label="Previous image"
-          >
-            <ChevronLeft className="w-12 h-12" />
-          </button>
+              <div className="flex items-center gap-4">
+                <button onClick={prev} aria-label="Previous image" className="p-2 rounded bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-gold-500">
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
 
-          <button
-            onClick={nextImage}
-            className="absolute right-6 text-white hover:text-gold-500 transition-colors p-2"
-            aria-label="Next image"
-          >
-            <ChevronRight className="w-12 h-12" />
-          </button>
+                <div className="flex-1">
+                  <img src={images[index].url} alt={images[index].title} className="w-full max-h-[70vh] object-contain rounded-md shadow-lg mx-auto" />
+                  <div className="mt-3 text-center text-gray-200">{images[index].title}</div>
+                </div>
 
-          <div className="max-w-7xl max-h-[90vh] mx-auto px-20">
-            <img
-              src={images[currentImage].url}
-              alt={images[currentImage].title}
-              className="w-full h-full object-contain"
-            />
-            <p className="text-center text-white text-xl mt-6 font-light">
-              {images[currentImage].title}
-            </p>
-            <p className="text-center text-slate-400 text-sm mt-2">
-              {currentImage + 1} / {images.length}
-            </p>
+                <button onClick={next} aria-label="Next image" className="p-2 rounded bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-gold-500">
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </section>
   );
 }
