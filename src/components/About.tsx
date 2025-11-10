@@ -76,8 +76,8 @@ export function About() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-navy-700 p-6 border border-gold-500/20">
-                <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">500+</div>
-                <div className="text-gray-400">Happy Families</div>
+                <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">47</div>
+                <div className="text-gray-400">No Frill Homes</div>
               </div>
               <div className="bg-navy-700 p-6 border border-gold-500/20">
                 <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">10+</div>
