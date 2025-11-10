@@ -65,7 +65,10 @@ export function About() {
                 Welcome to Sara Ekadant! 
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                A world of bliss and serenity! | 1 & 2 BHK Homes | 3.5 BHK Duplex Homes | Commercial Spaces
+                A world of bliss and serenity where luxury meets prosperity !
+              </p>
+              <p className="text-gray-400 leading-relaxed mb-4">
+               1 & 2 BHK Homes | 3.5 BHK Duplex Homes | Commercial Spaces
               </p>
               <p className="text-gray-400 leading-relaxed mb-4">
                 A Perfect Blend of Modern Living & Business Opportunity.
