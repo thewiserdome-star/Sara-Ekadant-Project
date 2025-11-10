@@ -67,7 +67,7 @@ export function About() {
               <p className="text-gray-400 leading-relaxed mb-4">
                 A world of bliss and serenity where luxury meets prosperity !
               </p>
-              <p className="text-3xl font-playfair font-bold text-gold-500 mb-2">
+              <p className="text-3xl font-playfair font-bold text-gold-200 mb-2">
                1 & 2 BHK Homes | 3.5 BHK Duplex Homes | Commercial Spaces
               </p>
               <p className="text-gray-400 leading-relaxed mb-4">
