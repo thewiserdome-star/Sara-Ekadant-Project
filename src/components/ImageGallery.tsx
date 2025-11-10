@@ -18,6 +18,21 @@ const images = [
     url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_05_building_side copy.jpg',
     title: 'Horizontal Side Elevation',
   },
+ {
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_04_building_perspective copy.jpg',
+    title: 'Building Perspective',
+  },
+  {
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_07 copy.jpg',
+    title: 'Left Diagonal Side Elevation',
+  },
+  {
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_04_Night_view copy.jpg',
+    title: 'Night View Elevation',
+  },
+
+
+  
 ];
 
 export function ImageGallery() {
