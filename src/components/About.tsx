@@ -62,16 +62,16 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-playfair font-bold text-white mb-6">
-                About The Project
+                Welcome to Sara Ekadant! 
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Welcome to your dream home, where luxury meets Prosperity. Our meticulously designed residences offer the perfect blend of modern architecture and timeless elegance.
+                A world of bliss and serenity! | 1 & 2 BHK Homes | 3.5 BHK Duplex Homes | Commercial Spaces
               </p>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Located in a prime area with excellent connectivity, this project redefines urban living with spacious layouts, premium finishes, and world-class amenities.
+                A Perfect Blend of Modern Living & Business Opportunity.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Every aspect has been carefully planned to ensure your family enjoys a lifestyle of convenience, comfort, and luxury.
+                Discover a place where comfort, elegance, and opportunity come together. Sara Ekadant is a thoughtfully planned residential and commercial development, offering stylish 1 & 2 BHK homes, premium 3.5 BHK duplex residences, and commercial spaces in a vibrant, well-connected location. Whether you’re looking for your dream home or the perfect spot for your business, Sara Ekadant has everything you need under one roof.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -80,7 +80,7 @@ export function About() {
                 <div className="text-gray-400">Happy Families</div>
               </div>
               <div className="bg-navy-700 p-6 border border-gold-500/20">
-                <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">25+</div>
+                <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">10+</div>
                 <div className="text-gray-400">Amenities</div>
               </div>
               <div className="bg-navy-700 p-6 border border-gold-500/20">
