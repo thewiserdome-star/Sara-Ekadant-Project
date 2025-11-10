@@ -125,21 +125,34 @@ export function ExploreFloorPlans() {
                     </ul>
                   </div>
 
+                  {/* Buttons */}
                   <div className="flex gap-2">
-                    <button
-                      type="button"
-                      onClick={() => openModal(plan)}
-                      className="flex-1 bg-gold-500 hover:bg-gold-600 text-navy-900 py-2 px-4 font-semibold text-sm transition-colors"
-                    >
-                      View Full Plan
-                    </button>
-                    <button
-                      type="button"
-                      onClick={scrollToContact}
-                      className="flex-1 bg-navy-700 hover:bg-navy-600 text-white py-2 px-4 font-semibold text-sm transition-colors border border-gold-500/20"
-                    >
-                      Enquire Now
-                    </button>
+                    {plan.id === '1bhk' ? (
+                      <button
+                        type="button"
+                        disabled
+                        className="flex-1 bg-gray-400 text-gray-700 py-2 px-4 font-semibold text-sm cursor-not-allowed opacity-70"
+                      >
+                        SOLD OUT
+                      </button>
+                    ) : (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => openModal(plan)}
+                          className="flex-1 bg-gold-500 hover:bg-gold-600 text-navy-900 py-2 px-4 font-semibold text-sm transition-colors"
+                        >
+                          View Full Plan
+                        </button>
+                        <button
+                          type="button"
+                          onClick={scrollToContact}
+                          className="flex-1 bg-navy-700 hover:bg-navy-600 text-white py-2 px-4 font-semibold text-sm transition-colors border border-gold-500/20"
+                        >
+                          Enquire Now
+                        </button>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
