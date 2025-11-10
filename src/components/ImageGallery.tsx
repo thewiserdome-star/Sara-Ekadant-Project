@@ -30,7 +30,11 @@ const images = [
     url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_04_Night_view copy.jpg',
     title: 'Night View Elevation',
   },
-
+  
+{
+    url: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/13_02_Block View copy.jpg',
+    title: 'Ameneties View from Top',
+  },
 
   
 ];
