@@ -76,7 +76,7 @@ export function Footer() {
               <p className="text-white font-semibold">P52100080513</p>
             </div>
             <a 
-              href="https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTIxMDAwODA1MTMmU2NhbnR5cGU9UHJvbW90ZXJMb2dpblFSQ29kZQ==" 
+              href="https://maharera.maharashtra.gov.in/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gold-500 hover:text-gold-600 transition-colors"
@@ -93,7 +93,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gold-500/20">
         <div className="text-xs text-gray-500 leading-relaxed">
           <p className="mb-4">
-            <strong className="text-gray-400">Privacy Policy:</strong> We respect your privacy and protect the data you share with us. Personal information collected through this website is used solely to respond to inquiries, share project updates, and enhance our services. We do not disclose your information to third parties except as required by law or to trusted partners assisting in communications. This website and its content, including artistic impressions and stock images, are for informational purposes only and do not constitute a binding offer, commitment, or warranty. By continuing to use this website, you agree to this Privacy Policy and its updates.The developers reserve the right to amend the layout, plans, dimension, elevation, color scheme, specifications and amenities etc. While every care has been taken in providing this information the owner or the agent cannot be held responsible for any inaccuracies.
+            <strong className="text-gray-400">Privacy Policy:</strong> We respect your privacy and protect the data you share with us. Personal information collected through this website is used solely to respond to inquiries, share project updates, and enhance our services. We do not disclose your information to third parties except as required by law or to trusted partners assisting in communications. This website and its content, including artistic impressions and stock images, are for informational purposes only and do not constitute a binding offer, commitment, or warranty. By continuing to use this website, you agree to this Privacy Policy and its updates.
           </p>
         </div>
       </div>
