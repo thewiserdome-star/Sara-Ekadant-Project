@@ -57,6 +57,20 @@ export function Footer() {
             <h3 className="text-white text-lg font-semibold">RERA Details</h3>
           </div>
           <div className="space-y-3">
+            {/* QR Code */}
+            <a 
+              href="https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTIxMDAwODA1MTMmU2NhbnR5cGU9UHJvbW90ZXJMb2dpblFSQ29kZQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-24 h-24 transition-transform hover:scale-105"
+              aria-label="Scan RERA QR Code"
+            >
+              <img
+                src="https://saraekadant.blob.core.windows.net/mediasaraekadant/QR%20Code%20RERA%20Sara%20Ekadant.jpg"
+                alt="RERA QR Code"
+                className="w-full h-full rounded border-2 border-gold-500/30 hover:border-gold-500 transition-colors"
+              />
+            </a>
             <div>
               <p className="text-sm text-gray-400 mb-1">MahaRERA Registration Number</p>
               <p className="text-white font-semibold">P52100080513</p>
