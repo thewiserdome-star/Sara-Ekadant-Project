@@ -3,6 +3,7 @@ import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Amenities } from './components/Amenities';
+import { FloorPlans } from './components/FloorPlans';
 import { ExploreFloorPlans } from './components/ExploreFloorPlans';
 import { ImageGallery } from './components/ImageGallery';
 import { Features } from './components/Features';

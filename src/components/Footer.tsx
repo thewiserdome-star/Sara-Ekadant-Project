@@ -1,41 +1,99 @@
-import { Building2 } from 'lucide-react';
+import { Building2, Link, Phone, Mail, MapPin, BadgeCheck, ExternalLink } from 'lucide-react';
 
 export function Footer() {
   return (
     <footer className="bg-navy-900 text-gray-300 py-12 px-6 border-t border-gold-500/20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+        {/* Brand Section */}
         <div>
           <div className="flex items-center gap-3 mb-4">
             <Building2 className="w-8 h-8 text-gold-500" />
-            <span className="text-2xl font-playfair font-bold text-white">Luxury Homes</span>
+            <span className="text-2xl font-playfair font-bold text-white">Sara Ekadant</span>
           </div>
           <p className="text-gray-400 leading-relaxed">Exceptional properties for discerning buyers seeking the finest in residential real estate.</p>
         </div>
 
+        {/* Quick Links Section */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
+          <div className="flex items-center gap-2 mb-4">
+            <Link className="w-5 h-5 text-gold-500" />
+            <h3 className="text-white text-lg font-semibold">Quick Links</h3>
+          </div>
           <ul className="space-y-2">
-            <li><a href="#home" className="hover:text-gold-500">Home</a></li>
-            <li><a href="#about" className="hover:text-gold-500">About</a></li>
-            <li><a href="#floor-plans" className="hover:text-gold-500">Floor Plans</a></li>
-            <li><a href="#gallery" className="hover:text-gold-500">Gallery</a></li>
-            <li><a href="#contact" className="hover:text-gold-500">Contact</a></li>
+            <li><a href="#home" className="hover:text-gold-500 transition-colors">Home</a></li>
+            <li><a href="#about" className="hover:text-gold-500 transition-colors">About</a></li>
+            <li><a href="#floor-plans" className="hover:text-gold-500 transition-colors">Floor Plans</a></li>
+            <li><a href="#gallery" className="hover:text-gold-500 transition-colors">Gallery</a></li>
+            <li><a href="#contact" className="hover:text-gold-500 transition-colors">Contact</a></li>
           </ul>
         </div>
 
+        {/* Contact Info Section */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">Contact Info</h3>
-          <div className="space-y-2">
-            <a href="tel:+911234567890" className="block hover:text-gold-500" aria-label="Call sales">+91 12345 67890</a>
-            <a href="mailto:info@saraekadant.com" className="block hover:text-gold-500" aria-label="Email sales">info@saraekadant.com</a>
-            <div className="mt-3 text-sm text-gray-500">MahaRERA: P52100080513</div>
+          <div className="flex items-center gap-2 mb-4">
+            <Phone className="w-5 h-5 text-gold-500" />
+            <h3 className="text-white text-lg font-semibold">Contact Info</h3>
+          </div>
+          <div className="space-y-3">
+            <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-gold-500 transition-colors" aria-label="Call sales">
+              <Phone className="w-4 h-4" />
+              +91 12345 67890
+            </a>
+            <a href="mailto:info@saraekadant.com" className="flex items-center gap-2 hover:text-gold-500 transition-colors" aria-label="Email sales">
+              <Mail className="w-4 h-4" />
+              info@saraekadant.com
+            </a>
+            <div className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-gold-500 mt-1 flex-shrink-0" />
+              <span className="text-gray-400">Sara Ekadant, Survey No. 11/A, Mahalunge, Pune</span>
+            </div>
+          </div>
+        </div>
+
+        {/* RERA Details Section */}
+        <div>
+          <div className="flex items-center gap-2 mb-4">
+            <BadgeCheck className="w-5 h-5 text-gold-500" />
+            <h3 className="text-white text-lg font-semibold">RERA Details</h3>
+          </div>
+          <div className="space-y-3">
+            <div>
+              <p className="text-sm text-gray-400 mb-1">MahaRERA Registration Number</p>
+              <p className="text-white font-semibold">P52100080513</p>
+            </div>
+            <a 
+              href="https://maharera.maharashtra.gov.in/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gold-500 hover:text-gold-600 transition-colors"
+              aria-label="Visit MahaRERA official website"
+            >
+              <span>Visit MahaRERA Site</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="mt-8 text-sm text-gray-500 flex items-center justify-between">
+      {/* Privacy Policy Section */}
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gold-500/20">
+        <div className="text-xs text-gray-500 leading-relaxed">
+          <p className="mb-4">
+            <strong className="text-gray-400">Privacy Policy:</strong> We respect your privacy and protect the data you share with us. Personal information collected through this website is used solely to respond to inquiries, share project updates, and enhance our services. We do not disclose your information to third parties except as required by law or to trusted partners assisting in communications. This website and its content, including artistic impressions and stock images, are for informational purposes only and do not constitute a binding offer, commitment, or warranty. By continuing to use this website, you agree to this Privacy Policy and its updates.
+          </p>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-gold-500/10 text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>© 2025 Sara Ekadant. All rights reserved.</div>
-        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gold-500 underline">Back to top</button>
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+          className="text-gold-500 hover:text-gold-600 underline transition-colors"
+          aria-label="Back to top"
+        >
+          Back to top
+        </button>
       </div>
     </footer>
   );
