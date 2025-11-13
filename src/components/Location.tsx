@@ -2,7 +2,7 @@ import { MapPin, Navigation, Train, ShoppingBag, GraduationCap, Cross, ExternalL
 
 export function Location() {
   const landmarks = [
-    { icon: Train, title: 'Metro Station', distance: '3.5 km' },
+    { icon: Train, title: 'Metro Station', distance: '4 km' },
     { icon: ShoppingBag, title: 'Shopping Mall', distance: '1.5 km' },
     { icon: GraduationCap, title: 'Schools', distance: '500 m' },
     { icon: Cross, title: 'Hospital', distance: '3 km' },
