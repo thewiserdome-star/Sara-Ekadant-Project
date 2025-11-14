@@ -24,10 +24,10 @@ function App() {
       <Hero onScrollToGallery={scrollToGallery} />
       <About />
       <Amenities />
-      <ExploreFloorPlans />
       <div ref={galleryRef}>
         <ImageGallery />
       </div>
+      <ExploreFloorPlans />
       <Features />
       <Location />
       <ContactForm />
