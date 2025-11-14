@@ -39,12 +39,10 @@ export function Footer() {
               <Phone className="w-4 h-4" />
               +91 94061 61669
             </a>
-            <span>/</span>
             <a href="tel:+918668370323" className="hover:text-gold-500 transition-colors flex items-center gap-1" aria-label="Call +91 8668370323">
               <Phone className="w-4 h-4" />
               +91 8668370323
             </a>
-            <span>/</span>
             <a href="tel:+917875026265" className="hover:text-gold-500 transition-colors flex items-center gap-1" aria-label="Call +91 7875026265">
               <Phone className="w-4 h-4" />
               +91 7875026265
