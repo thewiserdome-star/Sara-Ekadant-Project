@@ -29,7 +29,7 @@ export function ExploreFloorPlans() {
       carpetArea: '1167 sq.ft',
       imageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/2%20BHK%20PLAN%20-104%20copy.jpg',
       description: 'Ideal family home with ample space and smart design',
-      highlights: ['2 Bedrooms', '2 Bathrooms', 'Premium Kitchen', '2 Balconies']
+      highlights: ['2 Bedrooms', '2 Bathrooms', '3 Balconies','Premium Kitchen']
     },
     {
       id: '3bhk',
@@ -37,7 +37,7 @@ export function ExploreFloorPlans() {
       carpetArea: '2193 sq.ft',
       imageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/3%20BHK%20PLAN%20-%20604%20copy.jpg',
       description: 'Luxurious duplex offering spacious living with premium amenities',
-      highlights: ['3.5 Bedrooms', '3 Bathrooms', 'Premium Kitchen', 'Terrace Garden', 'Duplex Design']
+      highlights: ['3.5 Bedrooms', '4 Bathrooms', '3 Balconies', 'Terrace Garden', 'Duplex Design']
     }
   ];
 
