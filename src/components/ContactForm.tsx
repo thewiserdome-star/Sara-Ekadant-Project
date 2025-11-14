@@ -31,9 +31,19 @@ export function ContactForm() {
 
       if (error) throw error;
 
-      // Open PDF in new tab - most reliable method for cross-origin PDFs
+      // Open PDF in new tab/window - works on both desktop and mobile
       const pdfUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara%20Ekadant%20Brochure.pdf';
-      window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+      
+      // Create a temporary link and trigger it immediately
+      // This approach works better on mobile devices
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '', propertyConfig: '' });
