@@ -23,13 +23,13 @@ function App() {
     <div className="min-h-screen bg-navy-900">
       <Navigation />
       <Hero onScrollToGallery={scrollToGallery} />
-      <WhyChooseUs />
       <Welcome />
-      <Amenities />
       <div ref={galleryRef}>
         <ImageGallery />
       </div>
       <ExploreFloorPlans />
+      <WhyChooseUs />
+      <Amenities />
       <Features />
       <Location />
       <ContactForm />
