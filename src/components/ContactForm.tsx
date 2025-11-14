@@ -118,7 +118,7 @@ export function ContactForm() {
                 Property Configuration
               </label>
               <div className="flex flex-wrap gap-6 text-gray-200">
-                {['1 BHK', '2 BHK', '3.5 BHK Duplex'].map((option) => (
+                {['2 BHK', '3.5 BHK Duplex'].map((option) => (
                   <label key={option} className="inline-flex items-center space-x-2 cursor-pointer">
                     <input
                       type="radio"
