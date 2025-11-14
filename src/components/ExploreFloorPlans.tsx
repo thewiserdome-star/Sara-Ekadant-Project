@@ -8,6 +8,7 @@ interface FloorPlan {
   imageUrl: string;
   description: string;
   highlights: string[];
+  pricing?: string;
 }
 
 export function ExploreFloorPlans() {
@@ -29,7 +30,8 @@ export function ExploreFloorPlans() {
       carpetArea: '1167 sq.ft',
       imageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/2%20BHK%20PLAN%20-104%20copy.jpg',
       description: 'Ideal family home with ample space and smart design',
-      highlights: ['2 Bedrooms', '2 Bathrooms', '3 Balconies','Premium Kitchen']
+      highlights: ['2 Bedrooms', '2 Bathrooms', '3 Balconies','Premium Kitchen'],
+      pricing: 'starting 98 Lacs Onwards*'
     },
     {
       id: '3bhk',
@@ -37,7 +39,8 @@ export function ExploreFloorPlans() {
       carpetArea: '2193 sq.ft',
       imageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/3%20BHK%20PLAN%20-%20604%20copy.jpg',
       description: 'Luxurious duplex offering spacious living with premium amenities',
-      highlights: ['3.5 Bedrooms', '4 Bathrooms', '3 Balconies', 'Premium Kitchen', 'Duplex Design']
+      highlights: ['3.5 Bedrooms', '4 Bathrooms', '3 Balconies', 'Premium Kitchen', 'Duplex Design'],
+      pricing: 'starting 2.5 Cr Onwards*'
     }
   ];
 
@@ -124,6 +127,14 @@ export function ExploreFloorPlans() {
                       ))}
                     </ul>
                   </div>
+
+                  {/* Pricing Sticker */}
+                  {plan.pricing && (
+                    <div className="mb-6 bg-gold-500 text-navy-900 p-3 text-center font-bold rounded shadow-lg">
+                      <div className="text-sm uppercase tracking-wide mb-1">Price</div>
+                      <div className="text-lg">{plan.pricing}</div>
+                    </div>
+                  )}
 
                   {/* Buttons */}
                   <div className="flex gap-2">
