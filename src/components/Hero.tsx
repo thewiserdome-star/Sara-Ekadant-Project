@@ -2,10 +2,10 @@ import { Building2, ChevronDown, Images } from 'lucide-react';
 import { ReraCard } from './ReraCard';
 
 interface HeroProps {
-  onScrollToGallery: () => void;
+  onScrollToWelcome: () => void;
 }
 
-export function Hero({ onScrollToGallery }: HeroProps) {
+export function Hero({ onScrollToWelcome }: HeroProps) {
   return (
     <div id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900">
       <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant2_unrwog.jpg')] bg-cover bg-center opacity-30"></div>
@@ -29,7 +29,7 @@ export function Hero({ onScrollToGallery }: HeroProps) {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={onScrollToGallery}
+            onClick={onScrollToWelcome}
             className="group inline-flex items-center justify-center gap-3 bg-gold-500 hover:bg-gold-600 text-navy-900 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             Explore Property
