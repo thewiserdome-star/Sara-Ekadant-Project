@@ -108,7 +108,7 @@ export function ContactForm() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full pl-12 pr-4 py-3 bg-navy-700 border border-gold-500/20 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
-                  placeholder="KeertiJoshi@wiserdome.com"
+                  placeholder="Mayuri@wiserdome.com"
                 />
               </div>
             </div>
