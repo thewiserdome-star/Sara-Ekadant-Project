@@ -116,29 +116,32 @@ export function ExploreFloorPlans() {
                     {plan.description}
                   </p>
 
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Highlights:</h4>
-                    <ul className="space-y-1">
-                      {plan.highlights.slice(0, 3).map((highlight, index) => (
-                        <li key={index} className="text-gray-400 text-sm flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Pricing Image */}
-                  {plan.pricingImageUrl && (
-                    <div className="mb-6 flex justify-center">
-                      <img
-                        src={plan.pricingImageUrl}
-                        alt={`${plan.type} Pricing`}
-                        className="w-full max-w-sm h-auto object-contain"
-                        loading="lazy"
-                      />
+                  <div className="mb-6 flex gap-4 items-start">
+                    {/* Key Highlights Section */}
+                    <div className="flex-1">
+                      <h4 className="text-sm font-semibold text-white mb-2">Key Highlights:</h4>
+                      <ul className="space-y-1">
+                        {plan.highlights.slice(0, 3).map((highlight, index) => (
+                          <li key={index} className="text-gray-400 text-sm flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  )}
+
+                    {/* Pricing Image on the Right */}
+                    {plan.pricingImageUrl && (
+                      <div className="flex-shrink-0 w-32">
+                        <img
+                          src={plan.pricingImageUrl}
+                          alt={`${plan.type} Pricing`}
+                          className="w-full h-auto object-contain"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                  </div>
 
                   {/* Buttons */}
                   <div className="flex gap-2">
