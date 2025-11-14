@@ -13,20 +13,20 @@ import { Footer } from './components/Footer';
 import { FloatingActions } from './components/FloatingActions';
 
 function App() {
-  const galleryRef = useRef<HTMLDivElement>(null);
+  const welcomeRef = useRef<HTMLDivElement>(null);
 
-  const scrollToGallery = () => {
-    galleryRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToWelcome = () => {
+    welcomeRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div className="min-h-screen bg-navy-900">
       <Navigation />
-      <Hero onScrollToGallery={scrollToGallery} />
-      <Welcome />
-      <div ref={galleryRef}>
-        <ImageGallery />
+      <Hero onScrollToWelcome={scrollToWelcome} />
+      <div ref={welcomeRef}>
+        <Welcome />
       </div>
+      <ImageGallery />
       <ExploreFloorPlans />
       <WhyChooseUs />
       <Amenities />

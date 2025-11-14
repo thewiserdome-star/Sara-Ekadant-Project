@@ -1,6 +1,6 @@
 export function Welcome() {
   return (
-    <section className="py-24 px-6 bg-navy-900">
+    <section id="welcome" className="py-24 px-6 bg-navy-900">
       <div className="max-w-7xl mx-auto">
         <div className="bg-navy-800 p-8 md:p-12 border border-gold-500/20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
