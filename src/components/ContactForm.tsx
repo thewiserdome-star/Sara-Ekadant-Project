@@ -18,6 +18,11 @@ export function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    // Open PDF immediately in response to user action - critical for iOS Safari
+    // iOS Safari blocks tab opening if it happens after async operations
+    const pdfUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara%20Ekadant%20Brochure.pdf';
+    window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+
     try {
       const { error } = await supabase.from('leads').insert([
         {
@@ -30,14 +35,6 @@ export function ContactForm() {
       ]);
 
       if (error) throw error;
-
-      // Download PDF without opening in new tab
-      const link = document.createElement('a');
-      link.href = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara%20Ekadant%20Brochure.pdf';
-      link.download = 'Sara Ekadant Brochure.pdf';  // decoded filename for save dialog
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '', propertyConfig: '' });
@@ -75,7 +72,7 @@ export function ContactForm() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full pl-12 pr-4 py-3 bg-navy-700 border border-gold-500/20 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
-                    placeholder="John Smith"
+                    placeholder="Mayuri Phadke"
                   />
                 </div>
               </div>
@@ -111,7 +108,7 @@ export function ContactForm() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full pl-12 pr-4 py-3 bg-navy-700 border border-gold-500/20 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
-                  placeholder="john@example.com"
+                  placeholder="Mayuri@wiserdome.com"
                 />
               </div>
             </div>
@@ -121,7 +118,7 @@ export function ContactForm() {
                 Property Configuration
               </label>
               <div className="flex flex-wrap gap-6 text-gray-200">
-                {['1 BHK', '2 BHK', '3.5 BHK Duplex'].map((option) => (
+                {['2 BHK', '3.5 BHK Duplex'].map((option) => (
                   <label key={option} className="inline-flex items-center space-x-2 cursor-pointer">
                     <input
                       type="radio"
