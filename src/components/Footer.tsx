@@ -37,11 +37,11 @@ export function Footer() {
           <div className="space-y-3">
             <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-gold-500 transition-colors" aria-label="Call sales">
               <Phone className="w-4 h-4" />
-              +91 12345 67890
+              +91 94061 61609/ +91 8668370323 / +91 9867791258
             </a>
             <a href="mailto:info@saraekadant.com" className="flex items-center gap-2 hover:text-gold-500 transition-colors" aria-label="Email sales">
               <Mail className="w-4 h-4" />
-              info@saraekadant.com
+              saraekadant@gmail.com
             </a>
             <div className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-gold-500 mt-1 flex-shrink-0" />
