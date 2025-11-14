@@ -8,7 +8,7 @@ interface FloorPlan {
   imageUrl: string;
   description: string;
   highlights: string[];
-  pricing?: string;
+  pricingImageUrl?: string;
 }
 
 export function ExploreFloorPlans() {
@@ -31,7 +31,7 @@ export function ExploreFloorPlans() {
       imageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/2%20BHK%20PLAN%20-104%20copy.jpg',
       description: 'Ideal family home with ample space and smart design',
       highlights: ['2 Bedrooms', '2 Bathrooms', '3 Balconies','Premium Kitchen'],
-      pricing: 'starting 98 Lacs Onwards*'
+      pricingImageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/2%20BHK%20Price%20Tag.png'
     },
     {
       id: '3bhk',
@@ -40,7 +40,7 @@ export function ExploreFloorPlans() {
       imageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/3%20BHK%20PLAN%20-%20604%20copy.jpg',
       description: 'Luxurious duplex offering spacious living with premium amenities',
       highlights: ['3.5 Bedrooms', '4 Bathrooms', '3 Balconies', 'Premium Kitchen', 'Duplex Design'],
-      pricing: 'starting 2.5 Cr Onwards*'
+      pricingImageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/3.5%20BHK%20Price%20Tag.png'
     }
   ];
 
@@ -128,11 +128,15 @@ export function ExploreFloorPlans() {
                     </ul>
                   </div>
 
-                  {/* Pricing Sticker */}
-                  {plan.pricing && (
-                    <div className="mb-6 bg-gold-500 text-navy-900 p-3 text-center font-bold rounded shadow-lg">
-                      <div className="text-sm uppercase tracking-wide mb-1">Price</div>
-                      <div className="text-lg">{plan.pricing}</div>
+                  {/* Pricing Image */}
+                  {plan.pricingImageUrl && (
+                    <div className="mb-6 flex justify-center">
+                      <img
+                        src={plan.pricingImageUrl}
+                        alt={`${plan.type} Pricing`}
+                        className="w-full max-w-sm h-auto object-contain"
+                        loading="lazy"
+                      />
                     </div>
                   )}
 
