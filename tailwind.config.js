@@ -1,26 +1,30 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
-        'navy': {
-          900: '#0a1628',
-          800: '#0f1f3a',
-          700: '#1a2942',
-        },
-        'gold': {
-          500: '#d4af37',
-          600: '#b8941f',
-        },
-        'orange': {
-          500: '#ff6b35',
-          600: '#e55a2b',
-        }
+        // Refined Classic tokens
+        'brand-navy': '#07122A',
+        'brand-navy-2': '#0B2540',
+        'brand-navy-3': '#10283A',
+        'brand-gold': '#D4AF37',
+        'brand-gold-600': '#B88622',
+        'brand-cream': '#F6F2EA',
+        'muted-gray': '#B8C0C9',
+        'muted-cta': '#EDE6D9',
       },
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
-        'poppins': ['Poppins', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+        body: ['Poppins', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'soft-card': '0 8px 24px rgba(3,8,20,0.45)',
+      },
+      borderRadius: {
+        'lg-md': '12px',
       },
     },
   },
