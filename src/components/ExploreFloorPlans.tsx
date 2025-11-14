@@ -62,7 +62,7 @@ export function ExploreFloorPlans() {
 
   return (
     <>
-      <section className="py-24 px-6 bg-navy-800">
+      <section id="explore-floor-plans" className="py-24 px-6 bg-navy-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">
