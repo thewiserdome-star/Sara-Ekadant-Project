@@ -12,7 +12,9 @@ export function FloatingActions() {
       </a>
 
       <a
-        href="https://wa.me/918698859243"
+        #href="https://wa.me/918698859243"
+        href="https://wa.me/918698859243?text=I%20would%20like%20to%20understand%20more%20about%20project%20%22Sara%20Ekadant%22."
+
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 group"
