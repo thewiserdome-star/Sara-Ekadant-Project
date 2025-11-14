@@ -10,7 +10,7 @@ export function Navigation() {
     { label: 'Home', href: '#home', id: 'home' },
     { label: 'About', href: '#about', id: 'about' },
     { label: 'Amenities', href: '#amenities', id: 'amenities' },
-    { label: 'Floor Plans', href: '#floor-plans', id: 'floor-plans' },
+    { label: 'Floor Plans', href: '#explore-floor-plans', id: 'explore-floor-plans' },
     { label: 'Gallery', href: '#gallery', id: 'gallery' },
     { label: 'Location', href: '#location', id: 'location' },
     { label: 'Contact', href: '#contact', id: 'contact' },

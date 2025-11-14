@@ -8,6 +8,7 @@ interface FloorPlan {
   imageUrl: string;
   description: string;
   highlights: string[];
+  pricingImageUrl?: string;
 }
 
 export function ExploreFloorPlans() {
@@ -29,7 +30,8 @@ export function ExploreFloorPlans() {
       carpetArea: '1167 sq.ft',
       imageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/2%20BHK%20PLAN%20-104%20copy.jpg',
       description: 'Ideal family home with ample space and smart design',
-      highlights: ['2 Bedrooms', '2 Bathrooms', 'Premium Kitchen', '2 Balconies']
+      highlights: ['2 Bedrooms', '2 Bathrooms', '3 Balconies','Premium Kitchen'],
+      pricingImageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/2%20BHK%20Price%20Tag.png'
     },
     {
       id: '3bhk',
@@ -37,7 +39,8 @@ export function ExploreFloorPlans() {
       carpetArea: '2193 sq.ft',
       imageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/3%20BHK%20PLAN%20-%20604%20copy.jpg',
       description: 'Luxurious duplex offering spacious living with premium amenities',
-      highlights: ['3.5 Bedrooms', '3 Bathrooms', 'Premium Kitchen', 'Terrace Garden', 'Duplex Design']
+      highlights: ['3.5 Bedrooms', '4 Bathrooms', '3 Balconies', 'Premium Kitchen', 'Duplex Design'],
+      pricingImageUrl: 'https://saraekadant.blob.core.windows.net/mediasaraekadant/3.5%20BHK%20Price%20Tag.png'
     }
   ];
 
@@ -62,7 +65,7 @@ export function ExploreFloorPlans() {
 
   return (
     <>
-      <section className="py-24 px-6 bg-navy-800">
+      <section id="explore-floor-plans" className="py-24 px-6 bg-navy-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">
@@ -113,16 +116,31 @@ export function ExploreFloorPlans() {
                     {plan.description}
                   </p>
 
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Highlights:</h4>
-                    <ul className="space-y-1">
-                      {plan.highlights.slice(0, 3).map((highlight, index) => (
-                        <li key={index} className="text-gray-400 text-sm flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="mb-6 flex gap-4 items-start">
+                    {/* Key Highlights Section */}
+                    <div className="flex-1">
+                      <h4 className="text-sm font-semibold text-white mb-2">Key Highlights:</h4>
+                      <ul className="space-y-1">
+                        {plan.highlights.slice(0, 3).map((highlight, index) => (
+                          <li key={index} className="text-gray-400 text-sm flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Pricing Image on the Right */}
+                    {plan.pricingImageUrl && (
+                      <div className="flex-shrink-0 w-32">
+                        <img
+                          src={plan.pricingImageUrl}
+                          alt={`${plan.type} Pricing`}
+                          className="w-full h-auto object-contain"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
                   </div>
 
                   {/* Buttons */}
