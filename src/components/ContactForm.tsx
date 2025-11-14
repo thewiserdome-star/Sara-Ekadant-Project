@@ -31,26 +31,9 @@ export function ContactForm() {
 
       if (error) throw error;
 
-      // Download PDF by fetching it as a blob first (works reliably for cross-origin files)
-      try {
-        const pdfUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara%20Ekadant%20Brochure.pdf';
-        const response = await fetch(pdfUrl);
-        const blob = await response.blob();
-        const blobUrl = window.URL.createObjectURL(blob);
-        
-        const link = document.createElement('a');
-        link.href = blobUrl;
-        link.download = 'Sara Ekadant Brochure.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        
-        // Clean up the blob URL after a short delay
-        setTimeout(() => window.URL.revokeObjectURL(blobUrl), 100);
-      } catch (pdfError) {
-        console.error('Error downloading PDF:', pdfError);
-        // Continue with success message even if PDF download fails
-      }
+      // Open PDF in new tab - most reliable method for cross-origin PDFs
+      const pdfUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/Sara%20Ekadant%20Brochure.pdf';
+      window.open(pdfUrl, '_blank', 'noopener,noreferrer');
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '', propertyConfig: '' });
