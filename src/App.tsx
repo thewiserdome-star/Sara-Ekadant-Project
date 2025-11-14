@@ -1,7 +1,8 @@
 import { useRef } from 'react';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
+import { WhyChooseUs } from './components/WhyChooseUs';
+import { Welcome } from './components/Welcome';
 import { Amenities } from './components/Amenities';
 import { ExploreFloorPlans } from './components/ExploreFloorPlans';
 import { ImageGallery } from './components/ImageGallery';
@@ -22,7 +23,8 @@ function App() {
     <div className="min-h-screen bg-navy-900">
       <Navigation />
       <Hero onScrollToGallery={scrollToGallery} />
-      <About />
+      <WhyChooseUs />
+      <Welcome />
       <Amenities />
       <div ref={galleryRef}>
         <ImageGallery />
