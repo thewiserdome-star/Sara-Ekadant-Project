@@ -83,7 +83,7 @@ export function Navigation() {
           <div className="flex items-center gap-3">
             <img
               src="https://saraekadant.blob.core.windows.net/mediasaraekadant/SaraCorpLogoShort.jpg"
-              alt="Sara Ekadant logo"
+              alt="Sara Corporation"
               className="w-12 h-12"
               style={{ objectFit: 'contain' }}
             />
