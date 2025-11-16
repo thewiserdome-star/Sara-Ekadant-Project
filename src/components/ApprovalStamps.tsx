@@ -51,7 +51,7 @@ export function ApprovalStamps({
       </div>
 
       {/* Mobile Layout - Top Left */}
-      <div className="md:hidden absolute top-30 left-4 z-20 flex gap-2">
+      <div className="md:hidden absolute top-25 left-4 z-20 flex gap-2">
         {/* MahaRERA Approval Stamp */}
         <div className="bg-white/95 backdrop-blur-sm rounded shadow-md border border-gray-200/50 p-2">
           <a
