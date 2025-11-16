@@ -19,7 +19,7 @@ export function Hero({ onScrollToWelcome }: HeroProps) {
       <div className="md:hidden absolute top-24 right-4 z-20 flex flex-col items-center">
         {/* Project Title */}
         <p className="text-xs font-playfair font-bold text-white mb-2 text-center">
-          Sara Ekadant
+          MahaRERA
         </p>
         
         {/* QR Code */}
