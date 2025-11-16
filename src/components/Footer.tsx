@@ -35,11 +35,19 @@ export function Footer() {
             <h3 className="text-white text-lg font-semibold">Contact Info</h3>
           </div>
           <div className="space-y-3">
-            <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-gold-500 transition-colors" aria-label="Call sales">
+          <a href="tel:+919406161669" className="hover:text-gold-500 transition-colors flex items-center gap-1" aria-label="Call +91 94061 61669">
               <Phone className="w-4 h-4" />
-              +91 94061 61669/ +91 8668370323 / +91 7875026265
+              +91 94061 61669
             </a>
-            <a href="mailto:info@saraekadant.com" className="flex items-center gap-2 hover:text-gold-500 transition-colors" aria-label="Email sales">
+            <a href="tel:+918668370323" className="hover:text-gold-500 transition-colors flex items-center gap-1" aria-label="Call +91 8668370323">
+              <Phone className="w-4 h-4" />
+              +91 8668370323
+            </a>
+            <a href="tel:+917875026265" className="hover:text-gold-500 transition-colors flex items-center gap-1" aria-label="Call +91 7875026265">
+              <Phone className="w-4 h-4" />
+              +91 7875026265
+            </a>
+            <a href="mailto:saraekadant@gmail.com" className="flex items-center gap-2 hover:text-gold-500 transition-colors" aria-label="Email sales">
               <Mail className="w-4 h-4" />
               saraekadant@gmail.com
             </a>
