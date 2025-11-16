@@ -25,7 +25,7 @@ export function ApprovalStamps({
             <img
               src={mahareraUrl}
               alt="MahaRERA Approved"
-              className="w-20 h-20 object-contain"
+              className="w-20 h-16 object-contain"
               loading="eager"
             />
           </a>
@@ -43,7 +43,7 @@ export function ApprovalStamps({
             <img
               src={sbiApprovedUrl}
               alt="SBI Approved"
-              className="w-20 h-20 object-contain"
+              className="w-20 h-16 object-contain"
               loading="eager"
             />
           </a>
