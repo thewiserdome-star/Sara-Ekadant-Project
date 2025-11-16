@@ -84,7 +84,7 @@ export function Navigation() {
             <img
               src="https://saraekadant.blob.core.windows.net/mediasaraekadant/Ganapati_logo_theme_BackG.jpg"
               alt="Sara Corporation"
-              className="w-12 h-12"
+              className="w-16 h-16"
               style={{ objectFit: 'contain' }}
             />
             <span className="text-2xl font-playfair font-bold text-white">Sara Ekadant</span>
