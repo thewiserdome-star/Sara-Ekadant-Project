@@ -11,7 +11,7 @@ export function Footer() {
             <span className="text-2xl font-playfair font-bold text-white">Sara Ekadant</span>
           </div>
           <img 
-            src="https://saraekadant.blob.core.windows.net/mediasaraekadant/SaraCorpLogo.jpg" 
+            src="https://saraekadant.blob.core.windows.net/mediasaraekadant/SaraCorpLogo_themebackg.jpg" 
             alt="Sara Corp Logo" 
             className="w-48 h-auto"
           />
