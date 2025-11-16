@@ -16,7 +16,7 @@ export function Hero({ onScrollToWelcome }: HeroProps) {
       <ReraCard />
 
       {/* Mobile QR Code - Mobile Only */}
-      <div className="md:hidden absolute top-4 right-4 z-20 flex flex-col items-center">
+      <div className="md:hidden absolute top-24 right-4 z-20 flex flex-col items-center">
         {/* Project Title */}
         <p className="text-xs font-playfair font-bold text-white mb-2 text-center">
           Sara Ekadant
