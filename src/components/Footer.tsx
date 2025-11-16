@@ -10,7 +10,11 @@ export function Footer() {
             <Building2 className="w-8 h-8 text-gold-500" />
             <span className="text-2xl font-playfair font-bold text-white">Sara Ekadant</span>
           </div>
-          <p className="text-gray-400 leading-relaxed">Exceptional properties for discerning buyers seeking the finest in residential real estate.</p>
+          <img 
+            src="https://saraekadant.blob.core.windows.net/mediasaraekadant/SaraCorpLogo.jpg" 
+            alt="Sara Corp Logo" 
+            className="w-48 h-auto"
+          />
         </div>
 
         {/* Quick Links Section */}
