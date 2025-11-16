@@ -1,5 +1,6 @@
 import { Building2, ChevronDown, Images } from 'lucide-react';
 import { ReraCard } from './ReraCard';
+import { ApprovalStamps } from './ApprovalStamps';
 
 interface HeroProps {
   onScrollToWelcome: () => void;
@@ -14,6 +15,9 @@ export function Hero({ onScrollToWelcome }: HeroProps) {
 
       {/* RERA Card - Desktop Only */}
       <ReraCard />
+
+      {/* Approval Stamps - Top Left */}
+      <ApprovalStamps />
 
       {/* Mobile QR Code - Mobile Only */}
       <div className="md:hidden absolute top-24 right-4 z-20 flex flex-col items-center">
