@@ -82,9 +82,9 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
             <img
-              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/001_logo.JPG"
-              alt="Sara Ekadant logo"
-              className="w-12 h-12"
+              src="https://saraekadant.blob.core.windows.net/mediasaraekadant/Ganapati_logo_theme_BackG.jpg"
+              alt="Sara Corporation"
+              className="w-20 h-16"
               style={{ objectFit: 'contain' }}
             />
             <span className="text-2xl font-playfair font-bold text-white">Sara Ekadant</span>

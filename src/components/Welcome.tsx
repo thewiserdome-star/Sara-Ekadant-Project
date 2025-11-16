@@ -23,7 +23,7 @@ export function Welcome() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-navy-700 p-6 border border-gold-500/20">
-                <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">47</div>
+                <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">54</div>
                 <div className="text-gray-400">No Frill Homes</div>
               </div>
               <div className="bg-navy-700 p-6 border border-gold-500/20">
@@ -32,7 +32,7 @@ export function Welcome() {
               </div>
               <div className="bg-navy-700 p-6 border border-gold-500/20">
                 <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">3</div>
-                <div className="text-gray-400">Configurations</div>
+                <div className="text-gray-400">Configs</div>
               </div>
               <div className="bg-navy-700 p-6 border border-gold-500/20">
                 <div className="text-3xl font-playfair font-bold text-gold-500 mb-2">100%</div>

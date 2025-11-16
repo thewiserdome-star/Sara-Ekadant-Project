@@ -11,7 +11,7 @@ export function ReraCard({
   qrCodeUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/QR%20Code%20RERA%20Sara%20Ekadant.jpg',
   projectTitle = 'Sara Ekadant',
   reraNumber = 'P52100080513',
-  reraWebUrl = 'https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTIxMDAwODA1MTMmU2NhbnR5cGU9UHJvbW90ZXJMb2dpblFSQ29kZQ=='
+  reraWebUrl = 'https://maharerait.maharashtra.gov.in/public/project/view/56930'
 }: ReraCardProps) {
   return (
     <div className="hidden md:block absolute md:top-20 md:right-8 z-20 max-w-sm">
@@ -70,7 +70,7 @@ export function ReraCard({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors break-all"
             >
-              <span className="line-clamp-1">View Project Details</span>
+              <span className="line-clamp-1">https://maharera.maharashtra.gov.in/</span>
               <ExternalLink className="w-3 h-3 flex-shrink-0" />
             </a>
           </div>

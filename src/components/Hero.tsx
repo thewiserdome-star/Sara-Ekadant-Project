@@ -1,5 +1,6 @@
 import { Building2, ChevronDown, Images } from 'lucide-react';
 import { ReraCard } from './ReraCard';
+import { ApprovalStamps } from './ApprovalStamps';
 
 interface HeroProps {
   onScrollToWelcome: () => void;
@@ -8,12 +9,36 @@ interface HeroProps {
 export function Hero({ onScrollToWelcome }: HeroProps) {
   return (
     <div id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900">
-      <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/duzonog7y/image/upload/v1761221584/Sara_Ekadant2_unrwog.jpg')] bg-cover bg-center opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('https://saraekadant.blob.core.windows.net/mediasaraekadant/13_01_Bird%20View%20copy.jpg')] bg-cover bg-center opacity-30"></div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-navy-900/50 via-transparent to-navy-900/80"></div>
 
-      {/* RERA Card */}
+      {/* RERA Card - Desktop Only */}
       <ReraCard />
+
+      {/* Approval Stamps - Top Left */}
+      <ApprovalStamps />
+
+      {/* Mobile QR Code - Mobile Only */}
+      <div className="md:hidden absolute top-20 right-4 z-20 flex flex-col items-center">
+        {/* Project Title */}
+        <p className="text-xs font-playfair font-bold text-white mb-2 text-center">
+          MahaRERA
+        </p>
+        
+        {/* QR Code */}
+        <img
+          src="https://saraekadant.blob.core.windows.net/mediasaraekadant/QR%20Code%20RERA%20Sara%20Ekadant.jpg"
+          alt="RERA QR Code"
+          className="w-16 h-16 rounded border border-white/30 bg-white"
+          loading="eager"
+        />
+        
+        {/* RERA Number */}
+        <p className="text-xs font-mono text-white mt-2 text-center">
+          P52100080513
+        </p>
+      </div>
 
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
         <div className="flex justify-center mb-12">

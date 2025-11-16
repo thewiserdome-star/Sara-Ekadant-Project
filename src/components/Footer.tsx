@@ -10,7 +10,11 @@ export function Footer() {
             <Building2 className="w-8 h-8 text-gold-500" />
             <span className="text-2xl font-playfair font-bold text-white">Sara Ekadant</span>
           </div>
-          <p className="text-gray-400 leading-relaxed">Exceptional properties for discerning buyers seeking the finest in residential real estate.</p>
+          <img 
+            src="https://saraekadant.blob.core.windows.net/mediasaraekadant/SaraCorpLogo_themebackg.jpg" 
+            alt="Sara Corp Logo" 
+            className="w-48 h-auto"
+          />
         </div>
 
         {/* Quick Links Section */}
@@ -67,7 +71,7 @@ export function Footer() {
           <div className="space-y-3">
             {/* QR Code */}
             <a 
-              href="https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTIxMDAwODA1MTMmU2NhbnR5cGU9UHJvbW90ZXJMb2dpblFSQ29kZQ=="
+              href="https://maharerait.maharashtra.gov.in/public/project/view/56930"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-24 h-24 transition-transform hover:scale-105"
@@ -84,13 +88,13 @@ export function Footer() {
               <p className="text-white font-semibold">P52100080513</p>
             </div>
             <a 
-              href="https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTIxMDAwODA1MTMmU2NhbnR5cGU9UHJvbW90ZXJMb2dpblFSQ29kZQ==" 
+              href="https://maharerait.maharashtra.gov.in/public/project/view/56930" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gold-500 hover:text-gold-600 transition-colors"
               aria-label="Visit MahaRERA official website"
             >
-              <span>Visit MahaRERA Site</span>
+              <span>https://maharera.maharashtra.gov.in/</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
