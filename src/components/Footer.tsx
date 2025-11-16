@@ -67,7 +67,7 @@ export function Footer() {
           <div className="space-y-3">
             {/* QR Code */}
             <a 
-              href="https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTIxMDAwODA1MTMmU2NhbnR5cGU9UHJvbW90ZXJMb2dpblFSQ29kZQ=="
+              href="https://maharerait.maharashtra.gov.in/public/project/view/56930"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-24 h-24 transition-transform hover:scale-105"
@@ -90,7 +90,7 @@ export function Footer() {
               className="flex items-center gap-2 text-gold-500 hover:text-gold-600 transition-colors"
               aria-label="Visit MahaRERA official website"
             >
-              <span>Visit MahaRERA Site</span>
+              <span>https://maharera.maharashtra.gov.in/</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
