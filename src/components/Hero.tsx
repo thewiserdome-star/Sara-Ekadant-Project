@@ -12,8 +12,29 @@ export function Hero({ onScrollToWelcome }: HeroProps) {
 
       <div className="absolute inset-0 bg-gradient-to-b from-navy-900/50 via-transparent to-navy-900/80"></div>
 
-      {/* RERA Card */}
+      {/* RERA Card - Desktop Only */}
       <ReraCard />
+
+      {/* Mobile QR Code - Mobile Only */}
+      <div className="md:hidden absolute top-4 right-4 z-20 flex flex-col items-center">
+        {/* Project Title */}
+        <p className="text-xs font-playfair font-bold text-white mb-2 text-center">
+          Sara Ekadant
+        </p>
+        
+        {/* QR Code */}
+        <img
+          src="https://saraekadant.blob.core.windows.net/mediasaraekadant/QR%20Code%20RERA%20Sara%20Ekadant.jpg"
+          alt="RERA QR Code"
+          className="w-16 h-16 rounded border border-white/30 bg-white"
+          loading="eager"
+        />
+        
+        {/* RERA Number */}
+        <p className="text-xs font-mono text-white mt-2 text-center">
+          P52100080513
+        </p>
+      </div>
 
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20">
         <div className="flex justify-center mb-12">
