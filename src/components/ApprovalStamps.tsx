@@ -6,7 +6,7 @@ interface ApprovalStampsProps {
 }
 
 export function ApprovalStamps({
-  mahareraUrl = 'https://maharerait.maharashtra.gov.in/public/project/view/56930',
+  mahareraUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/MBVA_White_Wt_No.jpg',
   sbiApprovedUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/SBI%20Approved%20-Sara%20Ekdant.jpg'
 }: ApprovalStampsProps) {
   return (
@@ -51,7 +51,7 @@ export function ApprovalStamps({
       </div>
 
       {/* Mobile Layout - Top Left */}
-      <div className="md:hidden absolute top-24 left-4 z-20 flex gap-2">
+      <div className="md:hidden absolute top-30 left-4 z-20 flex gap-2">
         {/* MahaRERA Approval Stamp */}
         <div className="bg-white/95 backdrop-blur-sm rounded shadow-md border border-gray-200/50 p-2">
           <a
