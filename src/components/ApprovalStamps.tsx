@@ -6,8 +6,8 @@ interface ApprovalStampsProps {
 }
 
 export function ApprovalStamps({
-  mahareraUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/MBVA_White_Wt_No_Resized.jpg',
-  sbiApprovedUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/SBI%20Approved%20-Sara%20Ekdant.jpg'
+  mahareraUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/white_MBVA.jpg',
+  sbiApprovedUrl = 'https://saraekadant.blob.core.windows.net/mediasaraekadant/SBI%20Approved-White.jpg.png'
 }: ApprovalStampsProps) {
   return (
     <>
