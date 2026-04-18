@@ -41,11 +41,11 @@ export function Footer() {
           <div className="space-y-3">
           <a href="tel:+919422321198" className="hover:text-gold-500 transition-colors flex items-center gap-1" aria-label="Call +91 94223 21198">
               <Phone className="w-4 h-4" />
-              +91 94223 21198
+              +91 9422321198
             </a>
             <a href="tel:+919359299021" className="hover:text-gold-500 transition-colors flex items-center gap-1" aria-label="Call +91 9359299021">
               <Phone className="w-4 h-4" />
-              +91 93592 99021
+              +91 9359299021
             </a>
             <a href="tel:+917875026265" className="hover:text-gold-500 transition-colors flex items-center gap-1" aria-label="Call +91 7875026265">
               <Phone className="w-4 h-4" />
